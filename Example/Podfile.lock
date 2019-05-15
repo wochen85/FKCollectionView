@@ -1,16 +1,27 @@
 PODS:
-  - FKCollectionView (0.1.0)
+  - FKCollectionView (0.1.0):
+    - ReactiveObjC
+  - Masonry (1.1.0)
+  - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
   - FKCollectionView (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - ReactiveObjC
 
 EXTERNAL SOURCES:
   FKCollectionView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FKCollectionView: 02b8fcbee471a57d61b7e7d773d58662a370da85
+  FKCollectionView: 1fde04087bdbe6ccc7a8a48a242a6641ebd77208
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 3795973f45e9d5c60d5f3328c5e95bde5ce7d0d2
+PODFILE CHECKSUM: bb5fbfb96e6ac05831ac49c1f16935636ad28433
 
 COCOAPODS: 1.5.3

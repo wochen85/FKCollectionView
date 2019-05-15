@@ -2,21 +2,26 @@
   "name": "FKCollectionView",
   "version": "0.1.0",
   "summary": "A short description of FKCollectionView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/chatv5/FKCollectionView",
+  "description": "UICollectionView友好扩展",
+  "homepage": "https://github.com/wochen85/FKCollectionView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "chatv5": "wochen85@gmail.com"
+    "chatv5": "312163862@qq.com"
   },
   "source": {
-    "git": "https://github.com/chatv5/FKCollectionView.git",
+    "git": "https://github.com/wochen85/FKCollectionView.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "FKCollectionView/Classes/**/*"
+  "source_files": "FKCollectionView/Classes/**/*",
+  "dependencies": {
+    "ReactiveObjC": [
+
+    ]
+  }
 }

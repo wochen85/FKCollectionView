@@ -1,0 +1,16 @@
+PODS:
+  - FKCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - FKCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  FKCollectionView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FKCollectionView: 02b8fcbee471a57d61b7e7d773d58662a370da85
+
+PODFILE CHECKSUM: 3795973f45e9d5c60d5f3328c5e95bde5ce7d0d2
+
+COCOAPODS: 1.5.3

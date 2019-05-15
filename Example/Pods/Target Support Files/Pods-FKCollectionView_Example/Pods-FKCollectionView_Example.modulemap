@@ -1,0 +1,6 @@
+framework module Pods_FKCollectionView_Example {
+  umbrella header "Pods-FKCollectionView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

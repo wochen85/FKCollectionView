@@ -1,0 +1,22 @@
+{
+  "name": "FKCollectionView",
+  "version": "0.1.0",
+  "summary": "A short description of FKCollectionView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chatv5/FKCollectionView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chatv5": "wochen85@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/chatv5/FKCollectionView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FKCollectionView/Classes/**/*"
+}

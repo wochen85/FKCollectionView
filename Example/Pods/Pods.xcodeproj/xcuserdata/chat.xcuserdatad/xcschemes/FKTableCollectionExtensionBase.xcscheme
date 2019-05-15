@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3805BA632765B2A9BFA99BE60C06BA5"
-               BlueprintName = "FKCollectionView"
+               BlueprintIdentifier = "7FD3DECF9826F4F0250FC8D9DF478C56"
+               BlueprintName = "FKTableCollectionExtensionBase"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "FKCollectionView.framework">
+               BuildableName = "FKTableCollectionExtensionBase.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

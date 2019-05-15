@@ -1,5 +1,7 @@
 PODS:
   - FKCollectionView (0.1.0):
+    - FKTableCollectionExtensionBase
+  - FKTableCollectionExtensionBase (1.0.0):
     - ReactiveObjC
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
@@ -10,6 +12,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FKTableCollectionExtensionBase
     - Masonry
     - ReactiveObjC
 
@@ -18,7 +21,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FKCollectionView: 1fde04087bdbe6ccc7a8a48a242a6641ebd77208
+  FKCollectionView: e911dc901654cd8940bcc77e734e4a8e1729eb0b
+  FKTableCollectionExtensionBase: 9e49d82bb9065b9518e4d5eabe04b97e53472a0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 

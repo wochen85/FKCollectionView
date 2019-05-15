@@ -356,6 +356,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FKCollectionView_Example/Pods-FKCollectionView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FKCollectionView/FKCollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/FKTableCollectionExtensionBase/FKTableCollectionExtensionBase.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
@@ -364,6 +365,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FKCollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FKTableCollectionExtensionBase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);

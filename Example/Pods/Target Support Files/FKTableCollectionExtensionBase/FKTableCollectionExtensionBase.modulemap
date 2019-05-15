@@ -1,0 +1,6 @@
+framework module FKTableCollectionExtensionBase {
+  umbrella header "FKTableCollectionExtensionBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FKHeaderFooterCommon : UITableViewHeaderFooterView
-
+@interface FKHeaderFooterCommon : UIView
+@property (nonatomic, strong, readonly) UITapGestureRecognizer* tapGes;
 @end
 
 NS_ASSUME_NONNULL_END

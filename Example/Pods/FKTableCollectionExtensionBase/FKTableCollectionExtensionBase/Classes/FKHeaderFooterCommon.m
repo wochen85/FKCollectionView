@@ -7,7 +7,6 @@
 
 #import "FKHeaderFooterCommon.h"
 #import "FKHeaderFooterCommonModel.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface FKHeaderFooterCommon()
 @property (nonatomic, strong) UILabel* label;
@@ -25,11 +24,10 @@
     return _label;
 }
 
-- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)init
 {
-    self = [super initWithReuseIdentifier:reuseIdentifier];
-    if (self)
-    {
+    self = [super init];
+    if (self) {
         [self configSubViews];
     }
     return self;
@@ -62,10 +60,6 @@
     self.label.backgroundColor = headerFooterModel.bgColor;
     self.label.attributedText = headerFooterModel.text;
     self.label.textAlignment = headerFooterModel.textAlignment;
-
-    [[self.tapGes.rac_gestureSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
-        [headerFooterModel.clickSignal sendNext:x];
-    }];
 }
 
 @end

@@ -10,4 +10,13 @@
 
 @implementation FKTestFootViewModel
 
+- (RACSubject *)buttonClickedSignal
+{
+    if (!_buttonClickedSignal)
+    {
+        _buttonClickedSignal = [RACSubject subject];
+    }
+    return _buttonClickedSignal;
+}
+
 @end

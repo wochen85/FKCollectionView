@@ -7,6 +7,7 @@
 
 #import "UICollectionReusableView+FKExtension.h"
 #import "FKCollectionView.h"
+#import "FKCollectionReusableCommonView.h"
 
 @implementation UICollectionReusableView (FKExtension)
 +(instancetype) fk_viewForCollectionView:(UICollectionView*)collectionView supplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath headerFooterModel:(FKViewModel*)headerFooterModel
@@ -15,9 +16,9 @@
     {
         if ([headerFooterModel isKindOfClass:[FKHeaderFooterCommonModel class]])
         {
-            static NSString* commonHeadFoot = @"commonHeadFoot";
-            [collectionView registerClass:[FKHeaderFooterCommon class] forSupplementaryViewOfKind:kind withReuseIdentifier:commonHeadFoot];
-            FKHeaderFooterCommon* headerFooterView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:commonHeadFoot forIndexPath:indexPath];
+            static NSString* idf = @"commonHeadFoot";
+            [collectionView registerClass:[FKCollectionReusableCommonView class] forSupplementaryViewOfKind:kind withReuseIdentifier:idf];
+            FKCollectionReusableCommonView* headerFooterView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:idf forIndexPath:indexPath];
             headerFooterView.fk_viewModel = headerFooterModel;
             return headerFooterView;
         }

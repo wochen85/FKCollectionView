@@ -27,7 +27,10 @@
     // Initialization code
 }
 
-- (IBAction)action:(id)sender {
+- (IBAction)action:(id)sender
+{
+    FKTestFootViewModel* viewModel = (FKTestFootViewModel*)self.fk_viewModel;
+    [viewModel.buttonClickedSignal sendNext:nil];
 }
 
 @end

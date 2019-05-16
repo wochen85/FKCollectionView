@@ -5,6 +5,7 @@ platform :ios, '8.0'
 target 'FKCollectionView_Example' do
   pod 'FKCollectionView', :path => '../'
   pod 'Masonry'
+  pod 'SVProgressHUD'
 
   target 'FKCollectionView_Tests' do
     inherit! :search_paths

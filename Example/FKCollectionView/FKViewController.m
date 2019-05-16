@@ -12,6 +12,7 @@
 #import "FKTestCellModel.h"
 #import "FKTestHeadViewModel.h"
 #import "FKTestFootViewModel.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface FKViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -44,15 +45,21 @@
             NSLog(@"点击了item");
         }];
     }
-    
-    FKTestHeadViewModel* headModel = [FKTestHeadViewModel new];
-    headModel.buttonText = @"head button";
-    
-    NSAttributedString* attStr = [[NSAttributedString alloc] initWithString:@"呵呵" attributes:nil];
-    FKHeaderFooterCommonModel* hModel = [[FKHeaderFooterCommonModel alloc] initWithText:attStr bgColor:[UIColor redColor] textAlignment:NSTextAlignmentLeft];
+
+//    FKTestHeadViewModel* headModel = [FKTestHeadViewModel new];
+//    headModel.buttonText = @"head button";
+
+    NSAttributedString* attStr = [[NSAttributedString alloc] initWithString:@"header" attributes:nil];
+    FKHeaderFooterCommonModel* hModel = [[FKHeaderFooterCommonModel alloc] initWithText:attStr bgColor:[UIColor redColor] textAlignment:NSTextAlignmentCenter];
+    [hModel.clickSignal subscribeNext:^(id  _Nullable x) {
+        [SVProgressHUD showInfoWithStatus:@"点击了头部"];
+    }];
     
     FKTestFootViewModel* footModel = [FKTestFootViewModel new];
-    footModel.buttonText = @"foot button";
+    footModel.buttonText = @"footer";
+    [footModel.buttonClickedSignal subscribeNext:^(id  _Nullable x) {
+        [SVProgressHUD showInfoWithStatus:@"点击了尾部"];
+    }];
     
     FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:hModel];
     FKSectionHeaderFooterConfig* footConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:footModel];

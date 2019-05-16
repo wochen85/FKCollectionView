@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FKTestFootViewModel : FKViewModel
 @property (nonatomic, copy) NSString* buttonText;
+@property (nonatomic, strong) RACSubject* buttonClickedSignal;
 @end
 
 NS_ASSUME_NONNULL_END

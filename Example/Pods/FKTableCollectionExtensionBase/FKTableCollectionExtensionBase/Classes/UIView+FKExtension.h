@@ -9,8 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class FKHeaderFooterModel;
+@class FKViewModel;
 @interface UIView (FKExtension)
+@property (nonatomic, strong) FKViewModel* fk_viewModel;
 -(void) fk_bindModel:(id) model;
 @end
 

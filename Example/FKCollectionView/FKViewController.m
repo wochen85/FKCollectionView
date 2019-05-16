@@ -10,6 +10,8 @@
 #import "FKTestCell.h"
 #import "FKCollectionView.h"
 #import "FKTestCellModel.h"
+#import "FKTestHeadViewModel.h"
+#import "FKTestFootViewModel.h"
 
 @interface FKViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -31,21 +33,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    for (int i=0; i<30; i++)
+    for (int i=1; i<=10; i++)
     {
-        FKTestCellModel* cellModel = [FKTestCellModel new];
+        NSString* labelText = [NSString stringWithFormat:@"label %@", @(i)];
+        NSString* textFieldText = [NSString stringWithFormat:@"textField %@", @(i)];
+        NSString* buttonText = [NSString stringWithFormat:@"button %@", @(i)];
+        FKTestCellModel* cellModel = [[FKTestCellModel alloc] initWithLabelText:labelText TextFieldText:textFieldText ButtonText:buttonText];
         [self.cellModelArr addObject:cellModel];
         [cellModel.selectedSignal subscribeNext:^(FKCellModel * _Nullable x) {
-            NSLog(@"fuck");
+            NSLog(@"点击了item");
         }];
     }
-    [self.collectionView fk_configRowModels:self.cellModelArr];
+    
+    FKTestHeadViewModel* headModel = [FKTestHeadViewModel new];
+    headModel.buttonText = @"head button";
+    
+    FKTestFootViewModel* footModel = [FKTestFootViewModel new];
+    footModel.buttonText = @"foot button";
+    
+    FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:headModel];
+    FKSectionHeaderFooterConfig* footConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:footModel];
+    FKSectionModel* section1 = [[FKSectionModel alloc] initWithRowModels:self.cellModelArr headConfig:headConfig footConfig:footConfig];
+    [self.collectionView fk_configSectionModels:@[section1, section1, section1]];
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    [self.collectionView fk_configItemSpace:20 countOneLine:3 itemHeight:-1];
+    [self.collectionView fk_configItemSpace:10 countOneLine:3 itemHeight:-1];
 }
 
 - (void)didReceiveMemoryWarning

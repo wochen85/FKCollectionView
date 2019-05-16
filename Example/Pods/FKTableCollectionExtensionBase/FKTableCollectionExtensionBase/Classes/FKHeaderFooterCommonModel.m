@@ -6,6 +6,7 @@
 //
 
 #import "FKHeaderFooterCommonModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @implementation FKHeaderFooterCommonModel
 - (instancetype)initWithText:(NSAttributedString*) text bgColor:(UIColor*) bgColor textAlignment:(NSTextAlignment) textAlignment

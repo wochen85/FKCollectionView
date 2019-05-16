@@ -7,16 +7,16 @@
 //
 
 #import "FKSectionModel.h"
-#import "FKHeaderFooterModel.h"
+#import "FKViewModel.h"
 
 @interface FKSectionHeaderFooterConfig()
 @property (nonatomic) NSUInteger height;
-@property (nonatomic, strong) FKHeaderFooterModel* headFooterModel;
+@property (nonatomic, strong) FKViewModel* headFooterModel;
 @end
 
 @implementation FKSectionHeaderFooterConfig
 
-- (instancetype)initWithHeight:(NSUInteger) height headFooterModel:(FKHeaderFooterModel*) headFooterModel
+- (instancetype)initWithHeight:(NSUInteger) height headFooterModel:(FKViewModel*) headFooterModel
 {
     self = [super init];
     if (self) {
@@ -26,11 +26,11 @@
     return self;
 }
 
-- (FKHeaderFooterModel *)headFooterModel
+- (FKViewModel *)headFooterModel
 {
     if (nil == _headFooterModel)
     {
-        _headFooterModel = [FKHeaderFooterModel new];
+        _headFooterModel = [FKViewModel new];
     }
     return _headFooterModel;
 }

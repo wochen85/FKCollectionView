@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FD3DECF9826F4F0250FC8D9DF478C56"
+               BlueprintIdentifier = "C4B81B694BF9572742F806515037DD14"
                BlueprintName = "FKTableCollectionExtensionBase"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "FKTableCollectionExtensionBase.framework">

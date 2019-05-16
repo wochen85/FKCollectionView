@@ -11,6 +11,7 @@
 #endif
 
 #import "FKCollectionView.h"
+#import "UICollectionReusableView+FKExtension.h"
 #import "UICollectionView+FKExtension.h"
 #import "UICollectionViewCell+FKExtension.h"
 

@@ -7,6 +7,7 @@
 
 #import "FKHeaderFooterCommon.h"
 #import "FKHeaderFooterCommonModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface FKHeaderFooterCommon()
 @property (nonatomic, strong) UILabel* label;

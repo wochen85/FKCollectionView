@@ -5,11 +5,12 @@
 //  Created by chat on 2018/11/29.
 //
 
-#import "FKHeaderFooterModel.h"
+#import "FKViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FKHeaderFooterCommonModel : FKHeaderFooterModel
+@class RACSubject;
+@interface FKHeaderFooterCommonModel : FKViewModel
 - (instancetype)initWithText:(NSAttributedString*) text bgColor:(UIColor*) bgColor textAlignment:(NSTextAlignment) textAlignment;
 
 @property (nonatomic, strong) UIColor* bgColor;

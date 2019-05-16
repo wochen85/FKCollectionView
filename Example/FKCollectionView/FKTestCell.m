@@ -8,8 +8,24 @@
 
 #import "FKTestCell.h"
 #import "Masonry.h"
+#import "FKCollectionView.h"
+#import "FKTestCellModel.h"
+
+@interface FKTestCell()
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+@end
 
 @implementation FKTestCell
+
+- (void)fk_bindModel:(FKTestCellModel*)model
+{
+    self.label.text = model.labelText;
+    self.textField.text = model.textFieldText;
+    [self.button setTitle:model.buttonText forState:UIControlStateNormal];
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

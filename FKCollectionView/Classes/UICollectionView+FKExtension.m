@@ -11,9 +11,10 @@
 #import "FKSectionModel.h"
 #import "FKHeaderFooterCommonModel.h"
 #import "UICollectionViewCell+FKExtension.h"
+#import "UICollectionReusableView+FKExtension.h"
 //#import "UIView+FKExtension.h"
 
-@interface UICollectionView()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface UICollectionView()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSArray<FKSectionModel*>* fk_sectionModels;
 @end
 
@@ -49,11 +50,11 @@
     [self reloadData];
 }
 
--(void) fk_configHeader:(nullable FKHeaderFooterModel*) headerModel height:(CGFloat) height
+-(void) fk_configHeader:(nullable FKViewModel*) headerModel height:(CGFloat) height
 {
 }
 
--(void) fk_configFooter:(FKHeaderFooterModel*) footerModel height:(CGFloat) height
+-(void) fk_configFooter:(FKViewModel*) footerModel height:(CGFloat) height
 {
 }
 
@@ -63,7 +64,7 @@
     layout.minimumLineSpacing = itemSpace;
     layout.minimumInteritemSpacing = itemSpace;
     CGFloat selfWidth = self.frame.size.width;
-    CGFloat width = (selfWidth-(countOneLine+1)*itemSpace)/countOneLine;
+    CGFloat width = (int)(selfWidth-(countOneLine+1)*itemSpace)/countOneLine;
     layout.itemSize = CGSizeMake(width, itemHeight>0?itemHeight:width);
     layout.sectionInset = UIEdgeInsetsMake(itemSpace,itemSpace,itemSpace,itemSpace);
 }
@@ -92,12 +93,37 @@
     return [UICollectionViewCell fk_collectionView:collectionView cellForItemAtIndexPath:indexPath cellModel:[self rowModel:indexPath]];
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    FKViewModel* headFooterModel = nil;
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader])
+    {
+        headFooterModel = self.fk_sectionModels[indexPath.section].headConfig.headFooterModel;
+    }
+    else
+    {
+        headFooterModel = self.fk_sectionModels[indexPath.section].footConfig.headFooterModel;
+    }
+    return [UICollectionReusableView fk_viewForCollectionView:collectionView supplementaryElementOfKind:kind atIndexPath:indexPath headerFooterModel:headFooterModel];
+}
+
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[self rowModel:indexPath].selectedSignal sendNext:[self rowModel:indexPath]];
     });
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(0, self.fk_sectionModels[section].headConfig.height);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    return CGSizeMake(0, self.fk_sectionModels[section].footConfig.height);
 }
 
 @end

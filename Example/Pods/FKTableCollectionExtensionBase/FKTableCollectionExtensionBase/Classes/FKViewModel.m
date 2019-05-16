@@ -1,17 +1,13 @@
 //
-//  FKTableViewHeaderFooterModel.m
+//  FKViewModel.m
 //  Pods
 //
-//  Created by CHAT on 2018/11/28.
+//  Created by CHAT on 2019/5/16.
 //
 
-#import "FKHeaderFooterModel.h"
+#import "FKViewModel.h"
 
-@interface FKHeaderFooterModel()
-@end
-
-@implementation FKHeaderFooterModel
-
+@implementation FKViewModel
 - (NSString *)nibName
 {
     if (!_nibName)

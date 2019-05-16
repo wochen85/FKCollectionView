@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="FKTestHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0M-Tj-a9S">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.80392156859999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="action:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="TIK-fE-rqq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="S0M-Tj-a9S" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" id="N0Z-8G-Oz9"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="bottom" secondItem="S0M-Tj-a9S" secondAttribute="bottom" id="NhR-Ho-HmQ"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="S0M-Tj-a9S" secondAttribute="trailing" id="Sej-cY-RGa"/>
+                <constraint firstItem="S0M-Tj-a9S" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="ekP-Xk-Q0K"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="button" destination="S0M-Tj-a9S" id="Cph-2y-eZi"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

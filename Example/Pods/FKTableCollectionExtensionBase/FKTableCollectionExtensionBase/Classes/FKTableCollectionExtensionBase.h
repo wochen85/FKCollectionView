@@ -9,7 +9,7 @@
 #define FKTableCollectionExtensionBase_h
 
 #import "FKCellModel.h"
-#import "FKHeaderFooterModel.h"
+#import "FKViewModel.h"
 #import "FKSectionModel.h"
 #import "FKHeaderFooterCommonModel.h"
 #import "FKHeaderFooterCommon.h"

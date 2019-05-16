@@ -22,6 +22,12 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6B05D97C228BE95400462F0E /* FKTestCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D97B228BE95400462F0E /* FKTestCellModel.m */; };
+		6B05D982228D02E600462F0E /* FKTestHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D980228D02E600462F0E /* FKTestHeadView.m */; };
+		6B05D983228D02E600462F0E /* FKTestHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B05D981228D02E600462F0E /* FKTestHeadView.xib */; };
+		6B05D987228D03F400462F0E /* FKTestFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D985228D03F400462F0E /* FKTestFootView.m */; };
+		6B05D988228D03F400462F0E /* FKTestFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B05D986228D03F400462F0E /* FKTestFootView.xib */; };
+		6B05D98C228D073F00462F0E /* FKTestHeadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */; };
+		6B05D98F228D075100462F0E /* FKTestFootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D98E228D075100462F0E /* FKTestFootViewModel.m */; };
 		6BF3A9E3228BA7C500023B77 /* FKTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A9E1228BA7C500023B77 /* FKTestCell.m */; };
 		6BF3A9E4228BA7C500023B77 /* FKTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3A9E2228BA7C500023B77 /* FKTestCell.xib */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
@@ -64,6 +70,16 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B05D97A228BE95400462F0E /* FKTestCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestCellModel.h; sourceTree = "<group>"; };
 		6B05D97B228BE95400462F0E /* FKTestCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestCellModel.m; sourceTree = "<group>"; };
+		6B05D97F228D02E600462F0E /* FKTestHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestHeadView.h; sourceTree = "<group>"; };
+		6B05D980228D02E600462F0E /* FKTestHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestHeadView.m; sourceTree = "<group>"; };
+		6B05D981228D02E600462F0E /* FKTestHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FKTestHeadView.xib; sourceTree = "<group>"; };
+		6B05D984228D03F400462F0E /* FKTestFootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestFootView.h; sourceTree = "<group>"; };
+		6B05D985228D03F400462F0E /* FKTestFootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestFootView.m; sourceTree = "<group>"; };
+		6B05D986228D03F400462F0E /* FKTestFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FKTestFootView.xib; sourceTree = "<group>"; };
+		6B05D98A228D073F00462F0E /* FKTestHeadViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestHeadViewModel.h; sourceTree = "<group>"; };
+		6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestHeadViewModel.m; sourceTree = "<group>"; };
+		6B05D98D228D075100462F0E /* FKTestFootViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestFootViewModel.h; sourceTree = "<group>"; };
+		6B05D98E228D075100462F0E /* FKTestFootViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestFootViewModel.m; sourceTree = "<group>"; };
 		6BF3A9E0228BA7C500023B77 /* FKTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestCell.h; sourceTree = "<group>"; };
 		6BF3A9E1228BA7C500023B77 /* FKTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestCell.m; sourceTree = "<group>"; };
 		6BF3A9E2228BA7C500023B77 /* FKTestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FKTestCell.xib; sourceTree = "<group>"; };
@@ -140,6 +156,7 @@
 		6003F593195388D20070C39A /* Example for FKCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				6B05D97E228D027700462F0E /* HeadFoot */,
 				6BF3A9DF228BA79F00023B77 /* Cell */,
 				6003F59C195388D20070C39A /* FKAppDelegate.h */,
 				6003F59D195388D20070C39A /* FKAppDelegate.m */,
@@ -201,6 +218,31 @@
 				6B05D97B228BE95400462F0E /* FKTestCellModel.m */,
 			);
 			name = CellModel;
+			sourceTree = "<group>";
+		};
+		6B05D97E228D027700462F0E /* HeadFoot */ = {
+			isa = PBXGroup;
+			children = (
+				6B05D989228D070900462F0E /* HeadFootModel */,
+				6B05D97F228D02E600462F0E /* FKTestHeadView.h */,
+				6B05D980228D02E600462F0E /* FKTestHeadView.m */,
+				6B05D981228D02E600462F0E /* FKTestHeadView.xib */,
+				6B05D984228D03F400462F0E /* FKTestFootView.h */,
+				6B05D985228D03F400462F0E /* FKTestFootView.m */,
+				6B05D986228D03F400462F0E /* FKTestFootView.xib */,
+			);
+			name = HeadFoot;
+			sourceTree = "<group>";
+		};
+		6B05D989228D070900462F0E /* HeadFootModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B05D98A228D073F00462F0E /* FKTestHeadViewModel.h */,
+				6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */,
+				6B05D98D228D075100462F0E /* FKTestFootViewModel.h */,
+				6B05D98E228D075100462F0E /* FKTestFootViewModel.m */,
+			);
+			name = HeadFootModel;
 			sourceTree = "<group>";
 		};
 		6BF3A9DF228BA79F00023B77 /* Cell */ = {
@@ -305,11 +347,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B05D988228D03F400462F0E /* FKTestFootView.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				6BF3A9E4228BA7C500023B77 /* FKTestCell.xib in Resources */,
+				6B05D983228D02E600462F0E /* FKTestHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,11 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B05D98F228D075100462F0E /* FKTestFootViewModel.m in Sources */,
 				6BF3A9E3228BA7C500023B77 /* FKTestCell.m in Sources */,
+				6B05D987228D03F400462F0E /* FKTestFootView.m in Sources */,
+				6B05D982228D02E600462F0E /* FKTestHeadView.m in Sources */,
 				6003F59E195388D20070C39A /* FKAppDelegate.m in Sources */,
 				6B05D97C228BE95400462F0E /* FKTestCellModel.m in Sources */,
 				6003F5A7195388D20070C39A /* FKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6B05D98C228D073F00462F0E /* FKTestHeadViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

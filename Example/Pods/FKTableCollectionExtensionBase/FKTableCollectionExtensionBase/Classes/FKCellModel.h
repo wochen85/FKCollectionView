@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FKViewModel.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class RACSubject;
-@interface FKCellModel : NSObject
+@interface FKCellModel : FKViewModel
 @property (nonatomic, strong, readonly) RACSubject<FKCellModel*>* selectedSignal;
-@property (nonatomic, copy) NSString* nibName;
 @end
 
 NS_ASSUME_NONNULL_END

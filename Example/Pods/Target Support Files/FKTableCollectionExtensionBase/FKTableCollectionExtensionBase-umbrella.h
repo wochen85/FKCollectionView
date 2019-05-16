@@ -13,9 +13,9 @@
 #import "FKCellModel.h"
 #import "FKHeaderFooterCommon.h"
 #import "FKHeaderFooterCommonModel.h"
-#import "FKHeaderFooterModel.h"
 #import "FKSectionModel.h"
 #import "FKTableCollectionExtensionBase.h"
+#import "FKViewModel.h"
 #import "UIView+FKExtension.h"
 
 FOUNDATION_EXPORT double FKTableCollectionExtensionBaseVersionNumber;

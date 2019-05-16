@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class UIColor;
-@class FKHeaderFooterModel;
+@class FKViewModel;
 @interface FKSectionHeaderFooterConfig : NSObject
-- (instancetype)initWithHeight:(NSUInteger) height headFooterModel:(FKHeaderFooterModel*) headFooterModel;
+- (instancetype)initWithHeight:(NSUInteger) height headFooterModel:(FKViewModel*) headFooterModel;
 
 @property (nonatomic, readonly) NSUInteger height;
-@property (nonatomic, strong, readonly) FKHeaderFooterModel* headFooterModel;
+@property (nonatomic, strong, readonly) FKViewModel* headFooterModel;
 @end
 
 @class FKCellModel;

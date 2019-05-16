@@ -48,10 +48,13 @@
     FKTestHeadViewModel* headModel = [FKTestHeadViewModel new];
     headModel.buttonText = @"head button";
     
+    NSAttributedString* attStr = [[NSAttributedString alloc] initWithString:@"呵呵" attributes:nil];
+    FKHeaderFooterCommonModel* hModel = [[FKHeaderFooterCommonModel alloc] initWithText:attStr bgColor:[UIColor redColor] textAlignment:NSTextAlignmentLeft];
+    
     FKTestFootViewModel* footModel = [FKTestFootViewModel new];
     footModel.buttonText = @"foot button";
     
-    FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:headModel];
+    FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:hModel];
     FKSectionHeaderFooterConfig* footConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:footModel];
     FKSectionModel* section1 = [[FKSectionModel alloc] initWithRowModels:self.cellModelArr headConfig:headConfig footConfig:footConfig];
     [self.collectionView fk_configSectionModels:@[section1, section1, section1]];

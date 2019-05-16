@@ -16,12 +16,9 @@
         if ([headerFooterModel isKindOfClass:[FKHeaderFooterCommonModel class]])
         {
             static NSString* commonHeadFoot = @"commonHeadFoot";
+            [collectionView registerClass:[FKHeaderFooterCommon class] forSupplementaryViewOfKind:kind withReuseIdentifier:commonHeadFoot];
             FKHeaderFooterCommon* headerFooterView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:commonHeadFoot forIndexPath:indexPath];
-            if (nil == headerFooterView)
-            {
-                headerFooterView = [[FKHeaderFooterCommon alloc] initWithReuseIdentifier:commonHeadFoot];
-            }
-//            headerFooterView.fk_headerFooterModel = headerFooterModel;
+            headerFooterView.fk_viewModel = headerFooterModel;
             return headerFooterView;
         }
         

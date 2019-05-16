@@ -1,6 +1,0 @@
-framework module FKCollectionView {
-  umbrella header "FKCollectionView-umbrella.h"
-
-  export *
-  module * { export * }
-}

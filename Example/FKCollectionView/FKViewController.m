@@ -16,55 +16,50 @@
 
 @interface FKViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray<FKCellModel*>* cellModelArr;
 
 @end
 
 @implementation FKViewController
 
-- (NSMutableArray<FKCellModel *> *)cellModelArr
-{
-    if (!_cellModelArr)
-    {
-        _cellModelArr = [NSMutableArray array];
-    }
-    return _cellModelArr;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    for (int i=1; i<=10; i++)
+
+    NSMutableArray<FKSectionModel*>* sectionModelArr = @[].mutableCopy;
+    for (int j=0; j<3; j++)
     {
-        NSString* labelText = [NSString stringWithFormat:@"label %@", @(i)];
-        NSString* textFieldText = [NSString stringWithFormat:@"textField %@", @(i)];
-        NSString* buttonText = [NSString stringWithFormat:@"button %@", @(i)];
-        FKTestCellModel* cellModel = [[FKTestCellModel alloc] initWithLabelText:labelText TextFieldText:textFieldText ButtonText:buttonText];
-        [self.cellModelArr addObject:cellModel];
-        [cellModel.selectedSignal subscribeNext:^(FKCellModel * _Nullable x) {
-            NSLog(@"点击了item");
+        NSMutableArray<FKCellModel*>* cellModelArr = @[].mutableCopy;
+
+        for (int i=0; i<10; i++)
+        {
+            NSString* labelText = [NSString stringWithFormat:@"label %@-%@", @(j), @(i)];
+            NSString* textFieldText = [NSString stringWithFormat:@"textField %@-%@", @(j), @(i)];
+            NSString* buttonText = [NSString stringWithFormat:@"button %@-%@", @(j), @(i)];
+            FKTestCellModel* cellModel = [[FKTestCellModel alloc] initWithLabelText:labelText TextFieldText:textFieldText ButtonText:buttonText];
+            [cellModelArr addObject:cellModel];
+            [cellModel.selectedSignal subscribeNext:^(FKCellModel * _Nullable x) {
+                [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"点击了item %@-%@", @(j), @(i)]];
+            }];
+        }
+
+        NSAttributedString* attStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"通用头部 %@", @(j)] attributes:nil];
+        FKHeaderFooterCommonModel* hModel = [[FKHeaderFooterCommonModel alloc] initWithText:attStr bgColor:[UIColor redColor] textAlignment:NSTextAlignmentCenter];
+        [hModel.clickSignal subscribeNext:^(id  _Nullable x) {
+            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"点击了头部 %@", @(j)]];
         }];
+
+        FKTestFootViewModel* footModel = [FKTestFootViewModel new];
+        footModel.buttonText = [NSString stringWithFormat:@"自定义尾部 %@", @(j)];
+        [footModel.buttonClickedSignal subscribeNext:^(id  _Nullable x) {
+            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"点击了尾部 %@", @(j)]];
+        }];
+
+        FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:hModel];
+        FKSectionHeaderFooterConfig* footConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:footModel];
+        FKSectionModel* sectionModel = [[FKSectionModel alloc] initWithRowModels:cellModelArr headConfig:headConfig footConfig:footConfig];
+        [sectionModelArr addObject:sectionModel];
     }
-
-//    FKTestHeadViewModel* headModel = [FKTestHeadViewModel new];
-//    headModel.buttonText = @"head button";
-
-    NSAttributedString* attStr = [[NSAttributedString alloc] initWithString:@"header" attributes:nil];
-    FKHeaderFooterCommonModel* hModel = [[FKHeaderFooterCommonModel alloc] initWithText:attStr bgColor:[UIColor redColor] textAlignment:NSTextAlignmentCenter];
-    [hModel.clickSignal subscribeNext:^(id  _Nullable x) {
-        [SVProgressHUD showInfoWithStatus:@"点击了头部"];
-    }];
-    
-    FKTestFootViewModel* footModel = [FKTestFootViewModel new];
-    footModel.buttonText = @"footer";
-    [footModel.buttonClickedSignal subscribeNext:^(id  _Nullable x) {
-        [SVProgressHUD showInfoWithStatus:@"点击了尾部"];
-    }];
-    
-    FKSectionHeaderFooterConfig* headConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:hModel];
-    FKSectionHeaderFooterConfig* footConfig = [[FKSectionHeaderFooterConfig alloc] initWithHeight:50 headFooterModel:footModel];
-    FKSectionModel* section1 = [[FKSectionModel alloc] initWithRowModels:self.cellModelArr headConfig:headConfig footConfig:footConfig];
-    [self.collectionView fk_configSectionModels:@[section1, section1, section1]];
+    [self.collectionView fk_configSectionModels:sectionModelArr];
 }
 
 - (void)viewDidLayoutSubviews

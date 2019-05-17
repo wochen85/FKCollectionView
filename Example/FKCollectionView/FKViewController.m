@@ -14,7 +14,7 @@
 #import "FKTestFootViewModel.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
-@interface FKViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface FKViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -73,33 +73,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - UICollectionViewDataSource
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 5;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [collectionView registerNib:[UINib nibWithNibName:@"FKTestCell" bundle:nil] forCellWithReuseIdentifier:@"FKTestCell"];
-    FKTestCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FKTestCell" forIndexPath:indexPath];
-    return cell;
-}
-    
-#pragma mark - UICollectionViewDelegate
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (0==indexPath.row)
-//    {
-//        return CGSizeMake(100, 100);
-//    }
-//    return CGSizeMake(50, 50);
-//}
 
 @end

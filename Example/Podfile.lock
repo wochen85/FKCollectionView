@@ -1,21 +1,18 @@
 PODS:
   - FKCollectionView (0.1.0):
     - FKTableCollectionExtensionBase
-  - FKTableCollectionExtensionBase (1.0.2):
+  - FKTableCollectionExtensionBase (1.0.3):
     - ReactiveObjC
-  - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - FKCollectionView (from `../`)
-  - Masonry
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FKTableCollectionExtensionBase
-    - Masonry
     - ReactiveObjC
     - SVProgressHUD
 
@@ -25,11 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FKCollectionView: e911dc901654cd8940bcc77e734e4a8e1729eb0b
-  FKTableCollectionExtensionBase: 87a7d07355d049e322434ce8738ac3fc2adef1aa
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  FKTableCollectionExtensionBase: c01bdbbefb0648805d6962e474fe31c786c9d467
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 723c999f502f1952a83b5e48b17aba651b37e71f
+PODFILE CHECKSUM: 5c760a77e4e83a7e2ea8260cba7d7a68d6c99017
 
 COCOAPODS: 1.5.3

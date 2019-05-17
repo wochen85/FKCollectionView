@@ -29,7 +29,7 @@
 
 - (IBAction)action:(id)sender
 {
-    FKTestFootViewModel* viewModel = (FKTestFootViewModel*)self.fk_viewModel;
+    FKTestFootViewModel* viewModel = self.fk_viewModel;
     [viewModel.buttonClickedSignal sendNext:nil];
 }
 

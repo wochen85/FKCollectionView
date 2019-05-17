@@ -10,6 +10,6 @@
 
 #import "UICollectionView+FKExtension.h"
 #import "UICollectionViewCell+FKExtension.h"
-#import "FKTableCollectionExtensionBase.h"
+#import <FKTableCollectionExtensionBase/FKTableCollectionExtensionBase.h>
 
 #endif /* FKCollectionView_h */

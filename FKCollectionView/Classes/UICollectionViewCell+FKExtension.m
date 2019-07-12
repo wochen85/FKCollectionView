@@ -26,8 +26,16 @@
 
 + (instancetype) fk_collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath cellModel:(FKCellModel*)cellModel
 {
-    NSString* idf = cellModel.nibName;
-    [collectionView registerNib:[UINib nibWithNibName:idf bundle:nil] forCellWithReuseIdentifier:idf];
+    NSString* idf = cellModel.nibOrClassName;
+    NSString* nibPath = [[NSBundle mainBundle] pathForResource:idf ofType:@"nib"];
+    if (nibPath)
+    {
+        [collectionView registerNib:[UINib nibWithNibName:idf bundle:nil] forCellWithReuseIdentifier:idf];
+    }
+    else
+    {
+        [collectionView registerClass:NSClassFromString(idf) forCellWithReuseIdentifier:idf];
+    }
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:idf forIndexPath:indexPath];
     cell.fk_cellModel = cellModel;
     return cell;

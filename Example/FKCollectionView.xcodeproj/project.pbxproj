@@ -28,6 +28,11 @@
 		6B05D988228D03F400462F0E /* FKTestFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B05D986228D03F400462F0E /* FKTestFootView.xib */; };
 		6B05D98C228D073F00462F0E /* FKTestHeadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */; };
 		6B05D98F228D075100462F0E /* FKTestFootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05D98E228D075100462F0E /* FKTestFootViewModel.m */; };
+		6B5A3E9022D81B7E0057FF0C /* WithoutXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A3E8F22D81B7E0057FF0C /* WithoutXibViewController.m */; };
+		6BD1A51922D862F70074A01F /* WithoutXibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1A51822D862F70074A01F /* WithoutXibCell.m */; };
+		6BD1A51C22D863280074A01F /* WithoutXibCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1A51B22D863280074A01F /* WithoutXibCellModel.m */; };
+		6BD1A51F22D87C210074A01F /* WithoutXibHeadFoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1A51E22D87C210074A01F /* WithoutXibHeadFoot.m */; };
+		6BD1A52222D87C4A0074A01F /* WithoutXibHeadFootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1A52122D87C4A0074A01F /* WithoutXibHeadFootModel.m */; };
 		6BF3A9E3228BA7C500023B77 /* FKTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A9E1228BA7C500023B77 /* FKTestCell.m */; };
 		6BF3A9E4228BA7C500023B77 /* FKTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3A9E2228BA7C500023B77 /* FKTestCell.xib */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
@@ -81,6 +86,16 @@
 		6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestHeadViewModel.m; sourceTree = "<group>"; };
 		6B05D98D228D075100462F0E /* FKTestFootViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestFootViewModel.h; sourceTree = "<group>"; };
 		6B05D98E228D075100462F0E /* FKTestFootViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestFootViewModel.m; sourceTree = "<group>"; };
+		6B5A3E8E22D81B7E0057FF0C /* WithoutXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithoutXibViewController.h; sourceTree = "<group>"; };
+		6B5A3E8F22D81B7E0057FF0C /* WithoutXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithoutXibViewController.m; sourceTree = "<group>"; };
+		6BD1A51722D862F70074A01F /* WithoutXibCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithoutXibCell.h; sourceTree = "<group>"; };
+		6BD1A51822D862F70074A01F /* WithoutXibCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithoutXibCell.m; sourceTree = "<group>"; };
+		6BD1A51A22D863280074A01F /* WithoutXibCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithoutXibCellModel.h; sourceTree = "<group>"; };
+		6BD1A51B22D863280074A01F /* WithoutXibCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithoutXibCellModel.m; sourceTree = "<group>"; };
+		6BD1A51D22D87C210074A01F /* WithoutXibHeadFoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithoutXibHeadFoot.h; sourceTree = "<group>"; };
+		6BD1A51E22D87C210074A01F /* WithoutXibHeadFoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithoutXibHeadFoot.m; sourceTree = "<group>"; };
+		6BD1A52022D87C4A0074A01F /* WithoutXibHeadFootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithoutXibHeadFootModel.h; sourceTree = "<group>"; };
+		6BD1A52122D87C4A0074A01F /* WithoutXibHeadFootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithoutXibHeadFootModel.m; sourceTree = "<group>"; };
 		6BF3A9E0228BA7C500023B77 /* FKTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKTestCell.h; sourceTree = "<group>"; };
 		6BF3A9E1228BA7C500023B77 /* FKTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKTestCell.m; sourceTree = "<group>"; };
 		6BF3A9E2228BA7C500023B77 /* FKTestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FKTestCell.xib; sourceTree = "<group>"; };
@@ -163,6 +178,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* FKViewController.h */,
 				6003F5A6195388D20070C39A /* FKViewController.m */,
+				6B5A3E8E22D81B7E0057FF0C /* WithoutXibViewController.h */,
+				6B5A3E8F22D81B7E0057FF0C /* WithoutXibViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -216,6 +233,8 @@
 			children = (
 				6B05D97A228BE95400462F0E /* FKTestCellModel.h */,
 				6B05D97B228BE95400462F0E /* FKTestCellModel.m */,
+				6BD1A51A22D863280074A01F /* WithoutXibCellModel.h */,
+				6BD1A51B22D863280074A01F /* WithoutXibCellModel.m */,
 			);
 			name = CellModel;
 			sourceTree = "<group>";
@@ -230,6 +249,8 @@
 				6B05D984228D03F400462F0E /* FKTestFootView.h */,
 				6B05D985228D03F400462F0E /* FKTestFootView.m */,
 				6B05D986228D03F400462F0E /* FKTestFootView.xib */,
+				6BD1A51D22D87C210074A01F /* WithoutXibHeadFoot.h */,
+				6BD1A51E22D87C210074A01F /* WithoutXibHeadFoot.m */,
 			);
 			name = HeadFoot;
 			sourceTree = "<group>";
@@ -241,6 +262,8 @@
 				6B05D98B228D073F00462F0E /* FKTestHeadViewModel.m */,
 				6B05D98D228D075100462F0E /* FKTestFootViewModel.h */,
 				6B05D98E228D075100462F0E /* FKTestFootViewModel.m */,
+				6BD1A52022D87C4A0074A01F /* WithoutXibHeadFootModel.h */,
+				6BD1A52122D87C4A0074A01F /* WithoutXibHeadFootModel.m */,
 			);
 			name = HeadFootModel;
 			sourceTree = "<group>";
@@ -251,6 +274,8 @@
 				6B05D979228BE93900462F0E /* CellModel */,
 				6BF3A9E0228BA7C500023B77 /* FKTestCell.h */,
 				6BF3A9E1228BA7C500023B77 /* FKTestCell.m */,
+				6BD1A51722D862F70074A01F /* WithoutXibCell.h */,
+				6BD1A51822D862F70074A01F /* WithoutXibCell.m */,
 				6BF3A9E2228BA7C500023B77 /* FKTestCell.xib */,
 			);
 			name = Cell;
@@ -328,6 +353,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -391,21 +417,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FKCollectionView_Example/Pods-FKCollectionView_Example-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FKCollectionView_Example/Pods-FKCollectionView_Example-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FKCollectionView_Example/Pods-FKCollectionView_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FKCollectionView_Example/Pods-FKCollectionView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		897C9F47B0A3BF999341F4DE /* [CP] Check Pods Manifest.lock */ = {
@@ -433,13 +455,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD1A51F22D87C210074A01F /* WithoutXibHeadFoot.m in Sources */,
 				6B05D98F228D075100462F0E /* FKTestFootViewModel.m in Sources */,
 				6BF3A9E3228BA7C500023B77 /* FKTestCell.m in Sources */,
 				6B05D987228D03F400462F0E /* FKTestFootView.m in Sources */,
 				6B05D982228D02E600462F0E /* FKTestHeadView.m in Sources */,
+				6BD1A51C22D863280074A01F /* WithoutXibCellModel.m in Sources */,
+				6BD1A51922D862F70074A01F /* WithoutXibCell.m in Sources */,
 				6003F59E195388D20070C39A /* FKAppDelegate.m in Sources */,
+				6BD1A52222D87C4A0074A01F /* WithoutXibHeadFootModel.m in Sources */,
 				6B05D97C228BE95400462F0E /* FKTestCellModel.m in Sources */,
 				6003F5A7195388D20070C39A /* FKViewController.m in Sources */,
+				6B5A3E9022D81B7E0057FF0C /* WithoutXibViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				6B05D98C228D073F00462F0E /* FKTestHeadViewModel.m in Sources */,
 			);

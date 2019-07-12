@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FKCollectionView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of FKCollectionView.'
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'FKCollectionView/Classes/**/*'
-  s.dependency 'FKTableCollectionExtensionBase'
+  s.dependency 'FKTableCollectionExtensionBase', '1.0.5'
   
   # s.resource_bundles = {
   #   'FKCollectionView' => ['FKCollectionView/Assets/*.png']

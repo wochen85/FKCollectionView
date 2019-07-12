@@ -23,8 +23,16 @@
             return headerFooterView;
         }
         
-        NSString* idf = headerFooterModel.nibName;
-        [collectionView registerNib:[UINib nibWithNibName:idf bundle:nil] forSupplementaryViewOfKind:kind withReuseIdentifier:idf];
+        NSString* idf = headerFooterModel.nibOrClassName;
+        NSString* nibPath = [[NSBundle mainBundle] pathForResource:idf ofType:@"nib"];
+        if (nibPath)
+        {
+            [collectionView registerNib:[UINib nibWithNibName:idf bundle:nil] forSupplementaryViewOfKind:kind withReuseIdentifier:idf];
+        }
+        else
+        {
+            [collectionView registerClass:NSClassFromString(idf) forSupplementaryViewOfKind:kind withReuseIdentifier:idf];
+        }
         UICollectionReusableView* headerFooterView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:idf forIndexPath:indexPath];
         if (nil == headerFooterView)
         {
